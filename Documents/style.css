@@ -1,0 +1,734 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --darkblue:#4E4FEB;
+    --lightblue:#068FFF;
+    --white:#EEEEEE;
+}
+
+::-webkit-scrollbar{
+    width:0px;
+}
+
+header{
+    background-color: black;
+    height:10vh;
+    width:100vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:var(--white);
+    position: fixed;
+    z-index:10;
+}
+
+#logo{
+    color:white;
+    text-decoration: none;
+    margin-left:1em;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#logo::after{
+    content: "";
+    display: block;
+    width:40%;
+    height:3px;
+    background-color: var(--white);
+    margin-left:1em;
+    background-color: #068FFF;
+}
+
+#openMenu{
+    cursor: pointer;
+    display: none;
+}
+
+#closeMenu{
+    cursor: pointer;
+    display: none;
+}
+
+#openMenu:hover{
+    color:var(--lightblue);
+}
+
+#closeMenu:hover{
+    color:var(--lightblue);
+}
+
+#logo{
+    height: 8vh;
+}
+
+#mainMenu a{
+    text-decoration: none;
+    color:white;
+    margin:5px;
+    margin-left: 10px;
+    transition:all 0.30s linear 0s;
+}
+
+#mainMenu a:hover{
+    color:var(--lightblue);
+}
+
+
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+
+.bar{
+    display:block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--white);
+    border-radius: 15px;
+}
+
+.section{
+    height:90vh;
+    width:100vw;
+    background-color:white;
+}
+
+/*-----------------Hero section starts--------------------*/
+
+.hero{
+    width:100vw;
+    background-color: white;
+}
+
+#heroAdjust{
+    height:10vh;
+}
+
+.mainHero{
+    background-color: white;
+    height:90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+    justify-items: center;
+    align-items: center;
+    width:95vw;
+    margin:auto;
+}
+
+.leftHero{
+    align-self: start;
+    margin-top: 18vh;
+    justify-self: center;
+}
+
+.lh:nth-child(1){
+     font-size: 2.5em;
+}
+
+.lh:nth-child(2){
+     font-size: 3em;
+}
+
+.lh:nth-child(2) span{
+    color:#4E4FEB;
+    font-weight: bolder;
+}
+
+.lh:nth-child(3){
+    font-size: em;
+}
+
+.coverPhoto{
+    height:auto;
+    width:30vw;
+    margin-top:-10vh;
+}
+
+.leftHero div{
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.lh .media{
+    color:#4E4FEB;
+}
+
+.lh .media:hover{
+    color:black;
+}
+
+/*--------------this is about me section----------*/
+
+.aboutMe{
+    background-color: #4E4FEB;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+.aboutMe img{
+    height:400px;
+    width:auto;
+    border-radius: 50%;
+}
+
+#abImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:10px;
+}
+
+.aboutMe h1{
+    text-decoration: underline;
+    margin-bottom: 15px;
+    color:#FDB946;
+}
+
+.aboutMe p{
+    margin-bottom: 30px;
+}
+
+#abContainer{
+    margin: auto;
+    margin-left:2vw
+}
+
+#abButtons{
+     display: flex;
+}
+
+#abButtons div{
+    background-color: #FDB946;
+    color:white;
+    font-weight: 800;
+    margin:10px;
+    margin-left: 0px;
+    border-radius: 10px;
+    padding: 7px;
+    width:100px;
+    text-align: center;
+}
+
+#abDesEducationB, #abDesSkillsB, #abDesExperienceB{
+    cursor:pointer;
+}
+
+#abDesEducation{
+    display: none;
+}
+
+#abDesSkills{
+    display: none;
+}
+
+#abDesExperience{
+    display: none;
+}
+
+
+#abDesEducation.active{
+    display: block;
+}
+
+#abDesSkills.active{
+    display: block;
+}
+
+#abDesExperience.active{
+    display: block;
+}
+
+/*------------My works section------------------*/
+
+.myWorks{
+    background-color: #F4F4F4;
+}
+
+/*------------Work with me details and pricing----------------------*/
+
+.workWithMe{
+    background-image: url("/Media/Background.jpg");
+    background-size: cover;
+    height:100vh;
+}
+
+.workWithMe h1{
+    text-align: center;
+    height:10vh;
+    padding-top: 30px;
+}
+
+.cardsContainer{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3,1fr);
+    justify-items:center ;
+    align-items: center;
+    color:white;
+}
+
+.card{
+    height:70%;
+    width:230px;
+    background-color: #4E4FEB;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    transition: all 0.5 linear 0s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card h1{
+    margin-top: 1.5em;
+    font-size: 2em;
+}
+
+.card div{
+    font-size: 0.8em;
+}
+
+.card p{
+    color:white;
+    font-weight: 900;
+    font-size: 1.8em;
+    margin: 20px;
+    color: #FDB946;
+}
+
+.card p span{
+    font-size: 0.65em;
+}
+
+.card button{
+    width:50%;
+    border-radius: 15px;
+    color: black;
+    border: none;
+    height:40px;
+    font-size: 1em;
+    font-weight: 900;
+    margin-bottom:15px;
+}
+
+.card:nth-child(1)
+{
+    justify-self: end;
+}
+
+.card:nth-child(2)
+{
+    height:75%;
+    width:240px;
+}
+.card:nth-child(3)
+{
+    justify-self: self-start;
+}
+/*---------Customers testimonials and f&Q section----------*/
+
+.customers{
+    background-color: #F4F4F4;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap:5px;
+    margin:auto;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.review:nth-child(2){
+    display: none;
+}
+
+.review:nth-child(3){
+    display: none;
+}
+
+.review{
+   width:400px;
+   height:40vh;
+   background-color: #4E4FEB;
+   color:white;
+   border-radius: 20px;
+   margin:20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.review img{
+    width:100px;
+    height:auto;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.testimonials h1{
+    text-align: center;
+    margin:20px;
+}
+
+.testimonial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonNavigate{
+    font-size: 1.25em;
+}
+
+.buttonNavigate:hover{
+   color:#068FFF;
+   font-size:1.5em;
+}
+
+.faq h1{
+    text-align: center;
+    margin:20px;
+}
+
+
+
+.que .a{
+    display: none;
+}
+
+.que{
+    background-color: #4E4FEB;
+    margin:5px;
+    border-radius:10px;
+    color:white;
+    padding:10px;
+    transition:all 0s linear 0s;
+    width:500px;
+   }
+
+.que .q{
+    border-radius:4px;
+    margin-bottom: 5px;
+    height:30px;
+   }
+
+.que .a{
+    background-color: #01122033;
+    border-radius:4px;
+    margin-bottom: 5px;
+    margin-bottom:5px;
+   }
+
+.que.active .a{
+    display: block;
+}
+/*-----------This is footer section-------------*/
+
+footer{
+    height:50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    color:white;
+    font-size: small;
+    width:100vw;
+}
+
+
+footer #container .grid a{
+    font-weight: bold;
+    margin-top:10px;
+}
+
+footer #container .grid a:hover{
+    color:#068FFF;
+}
+
+footer #container .grid #logo{
+    margin-left:0px;
+}
+
+footer #container .grid input{
+    border-radius: 10px;
+    background-color: lightgray;
+    color:black;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-top:5px;
+}
+
+footer #container .grid input::placeholder{
+    color:black;
+    text-align: center;
+}
+
+footer #container .grid #logo::after{
+    margin-left:0px;
+    width:40px
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: start;
+    margin-top: 5px;
+}
+
+.media{
+    margin-right:12px;
+    font-size: 1.5em;
+}
+
+.media:hover{
+    color:#068FFF
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    width:80vw;
+    justify-items:center;
+    align-items: start;
+}
+
+#container .grid a{
+    color:white;
+    text-decoration: none;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+}
+
+#container button{
+    width:100%;
+    margin-top: 10px;
+    color:white;
+    background: #068FFF;
+    border-radius:15px;
+    padding:4px;
+}
+
+#ending{
+    background:black;
+    color:white;
+    font-size: 0.8em;
+    height:3.5vh;
+    width:100vw;
+    text-align: center;
+}
+
+#ending hr{
+    width:90vw;
+    text-align: center;
+    margin: auto;
+}
+
+/*This is for smaller devices*/
+
+@media (max-width:900px){
+    #mainMenu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color:rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        width:100vw;
+        right:-100%;
+        top:0px;
+        transition:all 0.5s linear 0s;
+    }
+    
+    #mainMenu a{
+         margin:20px;
+         font-size: larger;
+    }
+
+    #mainMenu.active{
+        top:0px;
+        right: 0px;
+    }
+
+    .hamburger{
+        display:block;
+        margin:10px;
+        z-index: 10;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+         opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        background-color: #068FFF;
+   }
+   
+   .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #068FFF;
+   }
+
+
+/*-------------------Hero section----------------*/
+
+   .mainHero{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+   }
+
+   .leftHero{
+    margin-top: 10vh;
+    font-size: small;
+    text-align: center;
+   }
+
+   .coverPhoto{
+     width:auto;
+     height:30vh;
+   }
+
+   /*--------aboutMe-------*/
+
+
+   /*---------My works-----*/
+
+
+   /*---------Work with me--*/
+
+   .workWithMe{
+    height: 150vh;
+   }
+
+   .cardsContainer{
+      grid-template-columns: repeat(1,1fr);
+      grid-template-rows: repeat(3,1fr);
+   }
+   
+   .card{
+      width:80vw;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3,1fr);
+      justify-items: center;
+      align-items: center;
+      margin-bottom:20px;
+   }
+
+   .card h1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0px;
+   }
+
+   .card div{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin:0px;
+   }
+
+   .card p{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin:0px;
+   }
+
+   .card button{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top:1em;
+   }
+
+   .card ul{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+   }
+
+   .card:nth-child(1){
+    justify-self: center;
+    height:30vh;
+   }
+
+   .card:nth-child(2){
+     height: 30vh;
+     width:80vw;
+   }
+
+   .card:nth-child(3){
+    justify-self: center;
+    height:30vh;
+   }
+
+   /*---------Customers review-----*/
+   .customers{
+    height:150vh;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+   }
+
+   .customers .testimonials h1{
+    margin-top:1.5em;
+    margin-bottom: 1em;
+   }
+
+   .review{
+    width:400px;
+   }
+}
+
+@media (max-width:900px){
+    .aboutMe{
+        display: flex;
+        flex-direction:column;
+        height: 130vh;
+    }
+
+    .aboutMe img{
+        height: 300px;
+        width:auto;
+        margin-top:20px;
+    }
+}
+
+@media (min-width:730px){
+    #hamburger{
+        display:none;
+    }
+}
