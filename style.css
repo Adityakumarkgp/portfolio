@@ -461,7 +461,7 @@ header{
     color:white;
     padding:10px;
     transition:all 0s linear 0s;
-    width:500px;
+    width:auto;
    }
 
 .que .q{
