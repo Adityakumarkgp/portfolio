@@ -175,6 +175,7 @@ header{
     display: flex;
     justify-content: center;
     height: 90vh;
+    padding:10px;
 }
 
 .aboutMe img{
@@ -254,7 +255,44 @@ header{
 
 .myWorks{
     background-color: #F4F4F4;
+    height:auto;
 }
+.myWorkContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    width:80%;
+    padding:20px;
+    margin:auto;
+   }
+
+   .mwItem{
+    background-color: #4E4FEB;
+    color:white;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+   }
+
+   .mwItem img{
+    width:100%;
+    height:auto;
+   }
+
+   .mwItem p{
+    padding:10px;
+   } 
+
+   .mwItem a{
+     color:white;
+     text-decoration: none;
+     font-size: larger;
+     margin: auto;
+     padding:10px;
+   }
+
 
 /*------------Work with me details and pricing----------------------*/
 
@@ -554,7 +592,7 @@ footer #container .grid #logo::after{
 @media (max-width:900px){
     #mainMenu{
         position: absolute;
-        display: flex;
+        display: none;
         flex-direction: column;
         background-color:rgba(0, 0, 0, 0.8);
         justify-content: center;
@@ -574,6 +612,7 @@ footer #container .grid #logo::after{
     #mainMenu.active{
         top:0px;
         right: 0px;
+        display: flex;
     }
 
     .hamburger{
@@ -619,7 +658,18 @@ footer #container .grid #logo::after{
 
 
    /*---------My works-----*/
+   
+   .myWorks{
+    height:auto;
+   }
 
+   .myWorkContainer{
+    grid-template-columns: repeat(1, 1fr);
+   }
+
+   .mwItem{
+    margin-top:30px;
+   }
 
    /*---------Work with me--*/
 
@@ -709,7 +759,26 @@ footer #container .grid #logo::after{
    }
 
    .review{
-    width:400px;
+    width:auto;
+   }
+
+   /*-------faq section----*/
+   .que{
+    width:95vw;
+    margin:10px;
+   }
+
+   /*----This is footer section----*/
+
+   footer{
+    height:auto;
+    padding:20px;
+   }
+
+   #container{
+    display: flex;
+    flex-direction: column;
+    height:auto;
    }
 }
 
@@ -717,7 +786,7 @@ footer #container .grid #logo::after{
     .aboutMe{
         display: flex;
         flex-direction:column;
-        height: 130vh;
+        height: auto;
     }
 
     .aboutMe img{
